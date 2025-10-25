@@ -6,16 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-     <h1>Copy it and send it to your close friend.</h1>
+     Copy it and send it to your close friend.
 
 
 
-<h1>Kire bondhu koi haraili . kotha barta nai.</h1>
+<p>Kire bondhu koi haraili . kotha barta nai.</p>
 <script>
+    const text=["Kire bondhu koi haraili . kotha barta nai. tore ami like kori ekhn gay kobi naki lesbain koibi tui janis .","Still or kotha Mone pore","tui amare goa marlew 1 tk o ber hobena"]
     document.addEventListener("copy",function(event){
-         event.clipboardData.setData('text/plain',"Kire bondhu koi haraili . kotha barta nai. tore ami like kori ekhn gay kobi naki lesbain koibi tui janis .")
+         
+         event.preventDefault()
+         const randomNumber=Math.round(Math.random() * 3);
+         event.clipboardData.setData('text/plain',text[randomNumber])
        
-       event.preventDefault()
+       
     })
     
 </script>
